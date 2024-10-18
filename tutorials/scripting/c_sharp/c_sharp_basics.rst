@@ -74,6 +74,7 @@ external editors:
 - MonoDevelop
 - Visual Studio for Mac
 - JetBrains Rider
+- Zed
 
 See the following sections for how to configure an external editor:
 
@@ -190,6 +191,19 @@ executable, not the 'console' version. For the **Working Directory**, type a sin
 checkbox. You may now close this window, click downward arrow on the debug profile
 dropdown, and select your new launch profile. Hit the green start button, and your
 game will begin playing in debug mode.
+
+
+Zed
+~~~
+
+After reading the "Prerequisites" section, you can download and install
+`Zed <https://zed.dev/download>`__.
+
+In Godot's **Editor → Editor Settings** menu:
+
+- Set **Dotnet** -> **Editor** -> **External Editor** to **Custom**.
+- Set **Custom Exec Path** to the absolute path of your Zed Editor executable
+- Set **Custom Exec Path Args** to **{project} {file}:{line}:{col}**
 
 
 Creating a C# script

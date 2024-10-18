@@ -56,6 +56,8 @@ Some example **Exec Flags** for various editors include:
 +---------------------+-----------------------------------------------------+
 | Sublime Text        | ``{project} {file}:{line}:{column}``                |
 +---------------------+-----------------------------------------------------+
+| Zed                 | ``{project} {file}:{line}:{col}``                   |
++---------------------+-----------------------------------------------------+
 
 .. note::
 
@@ -120,3 +122,21 @@ Emacs
 
 Check the official instructions to configure `LSP <https://github.com/godotengine/emacs-gdscript-mode#auto-completion-with-the-language-server-protocol-lsp>`_, and `DAP <https://github.com/godotengine/emacs-gdscript-mode#using-the-debugger>`_.
 
+
+Zed
+^^^
+Install Netcat (nc or ncat) on your system.
+
+Add the following to your settings.json in Zed
+
+.. code-block:: json
+
+	{
+	  "lsp": {
+	    "gdscript": {
+	      "binary": {
+	        "arguments": ["127.0.0.1", "6005"]
+	      }
+	    }
+	  }
+	}
